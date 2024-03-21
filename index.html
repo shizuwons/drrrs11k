@@ -1,0 +1,493 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="project.css">
+        <style>
+            body {
+                background-image: url('images/whitebg.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                font-family: 'Trebuchet MS', sans-serif !important;
+            }
+            .header {
+                padding: 20px !important;
+                background-image: url('images/bg-in.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 2;
+            }
+
+            .h1header {
+                padding: 20px !important;
+                margin: 0 !important;
+                color: white !important;
+                font-size: 30px;
+                font-family: 'Trebuchet MS', sans-serif !important;
+                font-weight: bold;
+            }
+
+            .sidebar {
+                margin: 0;
+                padding: 0;
+                width: 200px;
+                background-color: #f1f1f1;
+                position: fixed;
+                height: 100%;
+                overflow: auto;
+                font-family: 'Trebuchet MS', sans-serif !important;
+                margin-top: 95px;
+            }
+
+            .sidebar a {
+                display: block;
+                color: black;
+                padding: 16px;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            
+            .sidebar a.active {
+                background-color: #fe6c6c;
+                color: black;
+            }
+
+            .sidebar a.aactive {
+                background-color: #fd4040;
+                color: black;
+            }
+
+            .sidebar a:hover:not(.active) {
+                background-color: #555;
+                color: white;
+            }
+
+            .sidebar a:hover:not(.aactive) {
+                background-color: #555;
+                color: white;
+            }
+
+            .content {
+                margin: 20px;
+            }
+
+            .tabcontent {
+                margin-left: 200px;
+                display: none;
+                padding: 110px 12px 6px 12px;
+                text-align: justify;
+                font-size: 20px;
+                font-family: 'Trebuchet MS', sans-serif !important;
+            }
+
+            #subtablinks1 {
+                max-height: 0;
+                display: none;
+            }
+
+            .subactive {
+                max-height: 100% !important;
+                display: block !important;
+                transition: max-height 0.2s ease-in;
+                transition: display 0.2s ease-in;
+            }
+
+            #subtablinks2 {
+                max-height: 0;
+                display: none;
+            }
+
+            #subtablinks3 {
+                max-height: 0;
+                display: none;
+            }
+
+            @media screen and (max-width: 700px) {
+                .sidebar {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                }
+                .sidebar a {float: left;}
+                div.content {margin-left: 0;}
+            }
+
+            @media screen and (max-width: 400px) {
+                .sidebar a {
+                    text-align: center;
+                    float: none;
+                }
+            }
+
+            .c0, .c9, .c1 {
+                font-size: 17px !important;
+            }
+        </style>
+    </head>
+    <body style="margin:0">
+        <div class="header">
+            <div style="display:flex;align-items: center;">
+                <img src="images/bg.png" class="image" height="70"/>
+                <h1 class="h1header" style="padding-left: 20px;">San Beda College Alabang: Adaptive Preparedness</h1>    
+            </div>
+        </div>
+        <div class="sidebar">
+            <a class="tablinks" onclick="openCity(event, 'home')" id="defaultOpen">Home</a>
+            <a class="tablinks" onclick="openCity(event, 'intro')">Introduction</a>
+            <a class="tablinks" onclick="openSubtab(3, event)">Risk Assessment</a>
+            <div id="subtablinks3">
+                <a class="tablinks" onclick="openCity(event, 'earth')">Earthquake</a>
+                <a class="tablinks" onclick="openCity(event, 'volc')">Volcanic</a>
+            </div>
+            <a class="tablinks" onclick="openSubtab(1, event)">Preparedness Strategies</a>
+            <div id="subtablinks1">
+                <a class="tablinks" onclick="openCity(event, 'early')">Early Warnings & Communication</a>
+                <a class="tablinks" onclick="openCity(event, 'evac')">Evacuation & Shelter Plans</a>
+            </div>
+            <a class="tablinks" onclick="openSubtab(2, event)">Post Disaster Recovery & Support</a>
+            <div id="subtablinks2">
+                <a class="tablinks" onclick="openCity(event, 'coord')">Coordination with Response Team</a>
+                <a class="tablinks" onclick="openCity(event, 'psych')">Psychological Support Programs</a>
+            </div>
+            <a class="tablinks" onclick="openCity(event, 'conc')">Conclusion</a>
+        </div>
+        <div id="home" class="tabcontent content">
+            <div class="circle">
+                <img src="images/sanbeda.jpg" style="padding:20px;float:right;" width="75%"/>
+                <h3>Overview</h3>
+                <p class="c0">San Beda College Alabang accommodates a diverse community, spanning from young learners to graduate students. However, the presence of elementary and high school students, ages ranging from 5 to 18, poses a significant vulnerability in the face of potential disasters such as earthquakes or volcanic eruptions. Beyond demographic factors, the school's proximity to Taal Volcano, just 40.4 kilometers away, heightens the risk of adverse effects from volcanic activity. Additionally, its location along the West Valley Fault, notorious for producing powerful earthquakes, raises concerns, especially considering the fault's historical movement. West Valley Fault has an estimated 400-year recurrence interval. Its last known movement occurred in 1658, which is 358 years ago, raising the possibility that the area is overdue for another significant seismic event. Another concern is the aging infrastructure of certain buildings, notably the St. Scholastica building. This structure, housing hundreds of grade 11 students, exhibits signs of deterioration, including cracks in the ceilings, compromising student safety. To address these concerns and foster preparedness, we've developed this website, offering assessments, readiness strategies, and post-disaster support for the San Beda College Alabang community.</p>    
+            </div>
+        </div>
+
+        <div id="intro" class="tabcontent content"">
+            <img src="images/intro.jpg" width="50%" style="float:right;margin-left:10px;"/>
+            <p class="c2"><span class="c9 c1">Significance: </span></p>
+            <p class="c2"><span class="c0">Because of its proximity to the active Taal Volcano and location along the West Valley Fault, San Beda College Alabang is extremely vulnerable to disasters, especially earthquakes and volcanic eruptions. For this reason, developing a preparedness plan is important. A preparedness plan will provide people with specific information and guidance, empowering them to effectively respond when disasters strike</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">This plan not only provides guidance but also includes thorough assessments, predicting potential impacts on infrastructure and inhabitants. This prediction enables students and staff to prepare proactively, tailoring their responses based on the expected severity of the situation.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">Moreover, the preparedness plan enables the creation of adaptable evacuation strategies. By implementing a comprehensive approach, SBCA can effectively mitigate risks and ensure a coordinated response, fostering resilience within the community amidst crisis.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">In essence, the creation of a strong preparedness plan is crucial for San Beda College Alabang, as it not only enhances readiness but also supports the safety and well-being of all stakeholders in the face of unavoidable natural disasters.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c9 c1">Role of technology: </span></p>
+            <p class="c2"><span class="c0">Preparedness is very important for schools like San Beda College Alabang which is located near a volcano and along a fault line, as they face unique risks from potential volcanic eruptions and seismic events. These can pose significant risks to the safety and well-being of students, teachers, and staff. Therefore, SBCA must implement comprehensive preparedness measures to mitigate these risks effectively.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">One of the measures San Beda College Alabang can take is the use of technology. Technology plays a key role in enhancing preparedness actions by utilizing advanced monitoring systems, delivering early warning systems, and facilitating coordination and collaboration. </span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">Utilization of Advanced Monitoring Technologies:</span></p>
+            <p class="c2"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seismographs and GPS sensors track seismic activities.</span></p>
+            <p class="c2"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Detect early signs of volcanic eruptions or earthquakes.</span></p>
+            <p class="c2"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Allows timely warnings to schools and communities.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">Early Warning Dissemination:</span></p>
+            <p class="c2"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Technology facilitates rapid transmission of alerts.</span></p>
+            <p class="c2"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Can be through text messages, phone calls, sirens, social media, and mobile apps.</span></p>
+            <p class="c2"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensures quick and efficient warning dissemination.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">Coordination and Collaboration:</span></p>
+            <p class="c2"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Technology facilitates coordination among stakeholders.</span></p>
+            <p class="c2"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online platforms and communication tools used.</span></p>
+            <p class="c2"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Allows sharing critical information, coordinating evacuation plans, and resource allocation.</span></p>
+            <p class="c2"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enhances overall preparedness and response capabilities.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">In conclusion, the importance of preparedness and the role of technology in early warning and response efforts cannot be overstated for San Beda College Alabang which is located near the Taal volcano and West Valley Fault. By embracing technological advancements and implementing comprehensive preparedness measures, SBCA can enhance its resilience to natural hazards and ensure the safety and well-being of its students and staff.</span></p>
+        </div>
+
+        <div id="earth" class="tabcontent content">
+            <p class="c0">An earthquake is a rapid, intense shaking of the Earth's crust brought on by the movement of tectonic plates. It can cause a variety of effects, ranging from mild tremors to strong ground shaking, structural damage, and perhaps disastrous outcomes like landslides, tsunamis, and property and human loss. In the event of an earthquake, San Beda College Alabang could face significant impacts on its infrastructure, population, and critical facilities:</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <img src="images/house.jpg" width="70%" style="float:left; margin-right:20px;"/>
+            <p class="c0">• <b>Infrastructure Damage:</b> Given the aging infrastructure and signs of deterioration in buildings like the St. Scholastica building, there is a high risk of structural damage during an earthquake. Cracks in ceilings could worsen, leading to potential collapse or further structural compromise, endangering the safety of students and faculty.</p>
+            <p>&nbsp;</p>
+            <p class="c0">• <b>Population:</b> The population of SBCA is more than a thousand. This means that in the event of an earthquake, the impacts will be more severe. Students, teachers, and staff face the risk of injury or death from falling debris or structural collapse within crowded school buildings. The traumatic experience can lead to fear, anxiety, and PTSD, especially affecting children's vulnerability and worsening emotional distress within the school community. Additionally, students may become separated from their caregivers or family, adding to the confusion and distress. Reuniting families after the disaster can be challenging, particularly if communication and transportation systems are disrupted.</p>
+            <p>&nbsp;</p>
+            <p class="c0">• <b>Critical Facilities Impact:</b> The functionality of critical facilities, such as classrooms, laboratories, and administrative buildings, could be severely affected by infrastructure damage. Disruption to these facilities may slow down the continuation of academic activities and administrative functions, affecting the overall operation of the school.</p>
+        </div>
+        <div id="volc" class="tabcontent content">
+            <img src="images/tagaytay-volcano.png" width="100%"/>
+            <p class="c4"><span class="c0">There are inherent risks when it comes to living near a volcano that should not be disregarded, which is why it is important to consider San Beda College Alabang&#39;s (SBCA) safety based upon its geological whereabouts. In order to guarantee the protection of the students, staff, and infrastructures from hazardous volcanic activities like </span><span class="c20">pyroclastic flows, ashfall, and lahars</span><span class="c0">, SBCA must carry out serious and full-out hazard assessments then implement the following safety measures:</span></p>
+            <p class="c4"><span class="c0">&nbsp;</span></p>
+            <p><span class="c0"><b>1. Pyroclastic Flows</b><span class="c0">&nbsp;&ndash; are fast-moving currents of hot gas and volcanic material that can descend a volcano&rsquo;s slopes. It can inflict severe burns, damages toward infrastructures and vegetation.</span></span></p>
+            <p class="c2 c9"><span class="c0"></span></p>
+            <p class="c4 c9"><span class="c13">Safety Measures</span><span class="c0">:</span></p>
+            <ul class="c8 lst-kix_iqh3z1jrttl1-0 start">
+                <li class="c3 li-bullet-0"><span class="c0">Keep the school updated about volcanic activity via official sources, such as regional administrations and organizations that monitor volcanoes.</span></li>
+            </ul>
+            <p class="c2 c14"><span class="c0"></span></p>
+            <ul class="c8 lst-kix_iqh3z1jrttl1-0">
+                <li class="c3 li-bullet-0"><span class="c0">Establish safe zones apart from possible pyroclastic flow paths in your evacuation plans.</span></li>
+            </ul>
+            <p class="c2 c14"><span class="c0"></span></p>
+            <ul class="c8 lst-kix_iqh3z1jrttl1-0">
+                <li class="c3 li-bullet-0"><span class="c0">Educate students and staff how to recognize the warning signs of an approaching eruption and the significance of acting quickly to follow evacuation protocols.</span></li>
+            </ul>
+            <p class="c4"><span class="c0">&nbsp;</span></p>
+            <p><span class="c0"><b>2. Ashfall</b></span><span class="c0">&nbsp;&ndash; a hard-rain of tiny, jagged particles of rock and natural glass ejected into the atmosphere when a volcano undergoes an eruption.</span></p>
+            <p class="c2 c9"><span class="c0"></span></p>
+            <p class="c4 c9"><span class="c13">Safety Measures</span><span class="c0">:</span></p>
+            <ul class="c8 lst-kix_5cn7ju4psang-0 start">
+                <li class="c3 li-bullet-0"><span class="c0">Seal indoor areas around the school to prevent air infiltration.</span></li>
+            </ul>
+            <p class="c2 c14"><span class="c0"></span></p>
+            <ul class="c8 lst-kix_5cn7ju4psang-0">
+                <li class="c3 li-bullet-0"><span class="c0">Supply appropriate gear for the respiratory system like face masks.</span></li>
+            </ul>
+            <p class="c2 c14"><span class="c0"></span></p>
+            <ul class="c8 lst-kix_5cn7ju4psang-0">
+                <li class="c3 li-bullet-0"><span class="c0">Frequently manage the cleanliness of gutters and roof to prevent ash build-up, which could get heavy enough to cause structural damage.</span></li>
+            </ul>
+            <p class="c4"><span class="c0">&nbsp;</span></p>
+            <p><span class="c0"><b>3. Lahars</b></span><span class="c0">&nbsp;&ndash; are fast-moving mudflows that occur once volcanic matter links with water, such as rainfall or melting ice and snow.</span></p>
+            <p class="c2 c9"><span class="c0"></span></p>
+            <p class="c4 c9"><span class="c13">Safety Measures</span><span class="c0">:</span></p>
+            <ul class="c8 lst-kix_suouffhxtuuy-0 start">
+                <li class="c3 li-bullet-0"><span class="c0">Designate official evacuation routes and assembly zones.</span></li>
+            </ul>
+            <p class="c2"><span class="c0"></span></p>
+            <ul class="c8 lst-kix_suouffhxtuuy-0">
+                <li class="c3 li-bullet-0"><span class="c0">Avoid areas that are low in elevation.</span></li>
+            </ul>
+            <p class="c2"><span class="c0"></span></p>
+            <ul class="c8 lst-kix_suouffhxtuuy-0">
+                <li class="c3 li-bullet-0"><span class="c0">Monitor up-to-date weather forecasts and be alert for signs of hydrological factors.</span></li>
+            </ul>
+        </div>
+
+        <div id="early" class="tabcontent content">
+            <img src="images/emerge.jpg" style="margin-bottom: 20px;" width="100%"/>
+            <p class="c2"><span class="c9 c1">Procedures for Implementation of Seismic and Volcanic Monitoring Stations Connected to a Central Alert System within Early Warning Systems and Communication:</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span>1. </span><span class="c1">Assessment of Risk:</span><span class="c0">&nbsp;Identifying the areas prone to seismic events and volcanic eruptions using historical data and geological research.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span>2. </span><span class="c1">Selection of Monitoring Sites: </span><span class="c0">Determine ideal sites for monitoring stations taking into account accessibility, infrastructure, population density, and geological features.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span>3. </span><span class="c1">Installation of Monitoring Equipment:</span><span class="c0">&nbsp;Installing seismometers to detect ground vibrations, tiltmeters to measure ground deformation, and gas sensors to monitor volcanic emissions at the chosen locations.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span>4. </span><span class="c1">Data Transmission Infrastructure:</span><span class="c0">&nbsp;To Provide real-time data from monitoring stations to a central alarm system, establish a strong communication network. Installing wired or wireless communication devices, like satellite links or dedicated internet connections may be involved.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span>5. </span><span class="c1">Central Alert System Setup: </span><span class="c0">Create and implement a centralized alert system capable of receiving, analyzing, and sharing data from monitoring stations. Incorporate failover and redundancy techniques to reduce system downtime.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span>6. </span><span class="c1">Threshold Setting: </span><span class="c0">Establish specific levels of seismic activity and volcanic parameters that serve as triggers for alerts. Scientific study should serve as the foundation for these thresholds, which should be adjusted to avoid false alarms and provide timely warnings.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span>7. </span><span class="c1">Alert Protocols: </span><span class="c0">Create uniform procedures for issuing alerts to appropriate authorities, emergency responders, and the general public. Provide protocols for confirming the accuracy of the data and organizing the response.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span>8. </span><span class="c1">Training and Education:</span><span class="c0">&nbsp;Offer training to personnel tasked with operating and maintaining monitoring stations, interpreting data, and issuing alerts. Conduct public awareness initiatives to inform local populations of the value of readiness and emergency measures.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span>9. </span><span class="c1">Testing and Drills:</span><span class="c0">&nbsp;Regularly conduct tests and drills to assess the early warning system&#39;s effectiveness and acquaint stakeholders with response protocols. Determine the system&#39;s flaws and fill any holes.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span>10. </span><span class="c1">Continuous Monitoring and Improvement:</span><span class="c0">&nbsp;Establish a system for the continual maintenance of monitoring equipment and the constant monitoring of seismic and volcanic activity. Regularly evaluate and revise protocols, technology, and infrastructure to improve the efficiency of the early warning system.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+        </div>
+
+        <div id="evac" class="tabcontent content">
+            <p class="c2"><span class="c9 c1">Evacuation Plan</span></p>
+            <p class="c2"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 350.67px;"><img alt="" src="images/image1.png" style="width: 624.00px; height: 350.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2 c3"><span class="c9 c1"></span></p>
+            <p class="c2 c3"><span class="c9 c1"></span></p>
+            <p class="c2"><span class="c9 c1">Establishing Prepared Evacuation Centers: Identifying, Location, and Preparation</span></p>
+            <p class="c2 c3"><span class="c9 c1"></span></p>
+            <p class="c4"><span class="c0">During the eruption of Taal Volcano in 2023, Batangas City East Central Elementary School emerged as the primary evacuation center nearest to San Beda College Alabang, as detailed in Andreea Aro&#39;s article &quot;Google Philippines makes map of Evacuation Centers in Batangas&quot; published in the Manila Bulletin. Additionally, Poblacion 6 Brgy Hall was utilized as another evacuation site during the crisis, offering refuge to local residents. Looking ahead, Batangas City East Central Elementary School is expected to continue serving as a key evacuation center, ready to accommodate people in times of earthquakes, volcanic eruptions, and other potential disasters.</span></p>
+            <p class="c4"><span class="c0">In the event of an emergency occurring at San Beda College Alabang, locating nearby potential evacuation centers is crucial. Here&#39;s a guide to help you find and prepare these centers, ensuring they are equipped with necessary emergency supplies:</span></p>
+            <p class="c4"><span class="c0">Contact the Local Authorities:</span></p>
+            <ul class="c5 lst-kix_sx58zo83ir9g-0 start">
+               <li class="c4 c7 li-bullet-0"><span class="c0">Reach out to the local government offices, barangay/neighborhood officials, or the Municipal Disaster Risk Reduction and Management Office (MDRRMO) in Batangas City. They can provide you with a list of designated evacuation centers near San Beda College Alabang.</span></li>
+            </ul>
+            <p class="c4"><span class="c0">Research: </span></p>
+            <ul class="c5 lst-kix_drqshsee0f4q-0 start">
+               <li class="c4 c7 li-bullet-0"><span class="c0">Conduct online research to identify nearby facilities that could serve as potential evacuation centers. These could include schools, community centers, churches, or public buildings with large open spaces.</span></li>
+            </ul>
+            <p class="c4"><span class="c0">Site Visits: </span></p>
+            <ul class="c5 lst-kix_i60n5cc7gwxj-0 start">
+               <li class="c4 c7 li-bullet-0"><span class="c0">Visit potential evacuation sites and assess their suitability. Consider factors such as capacity (how many people can be accommodated), accessibility (ease of reaching the location), safety (distance from hazards), and available facilities (water sources).</span></li>
+            </ul>
+            <p class="c4"><span class="c0">Contact Potential Evacuation Centers: </span></p>
+            <ul class="c5 lst-kix_r0oru0io3bp4-0 start">
+               <li class="c4 c7 li-bullet-0"><span>Contact the management or authorities in charge of the identified sites to discuss their willingness to serve as evacuation centers during emergencies. Ensure they understand the importance of being prepared with emergency supplies.</span></li>
+            </ul>
+            <p class="c4"><span class="c0">Prepare Emergency Supplies: </span></p>
+            <ul class="c5 lst-kix_wp74ne8y176k-0 start">
+               <li class="c4 c7 li-bullet-0"><span class="c0">Collaborate local authorities, humanitarian organizations, and university administration to stockpile emergency supplies at the designated evacuation centers. These supplies may include non-perishable food, water, medical kits, blankets, flashlights, batteries, and communication devices.</span></li>
+            </ul>
+            <p class="c4"><span class="c0">Emergency Planning and Training: </span></p>
+            <ul class="c5 lst-kix_aekwyyz2t736-0 start">
+               <li class="c4 c7 li-bullet-0"><span class="c0">Create evacuation plans and conduct drills to ensure that students, faculty, and staff are aware of evacuation procedures and the location of designated evacuation centers. Training sessions on emergency preparedness and first aid can also be helpful.</span></li>
+            </ul>
+            <p class="c4"><span class="c0">Community Engagement: </span></p>
+            <ul class="c5 lst-kix_kaid85swgwu3-0 start">
+               <li class="c4 c7 li-bullet-0"><span class="c0">Involve the local community in emergency preparation efforts. Encourage residents who live near San Beda College Alabang to be aware of evacuation zones and to participate in disaster preparedness activities.</span></li>
+            </ul>
+            <p class="c4"><span class="c0">By taking these steps, you can help ensure that the University of Batangas and the surrounding community are adequately prepared to respond to emergencies and have access to appropriate evacuation centers stocked with emergency supplies.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c1 c9">Enhancing Evacuation Efficiency with Transportation Services</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">Given San Beda College Alabang&#39;s proximity to the Taal Volcano and the West Valley Fault, several strategies can be implemented to improve evacuation efficiency with transportation services, leveraging existing resources such as the school&#39;s bus service for students.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">Preparedness Planning:</span></p>
+            <ul class="c5 lst-kix_u25fn6ubaci-0 start">
+               <li class="c2 c7 li-bullet-0"><span class="c0">Incorporate transportation logistics into emergency preparedness plans. This includes determining routes, coordinating with drivers, and establishing protocols for activating transportation services during emergencies. </span></li>
+            </ul>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">Strategic &nbsp;Prioritization:</span></p>
+            <ul class="c5 lst-kix_cwlxkjkoktmb-0 start">
+               <li class="c2 c7 li-bullet-0"><span class="c0">Determine the priority groups for evacuation, such as students, the elderly, and those with disabilities. To ensure an efficient evacuation, assign specific buses or vehicles to each priority group.</span></li>
+            </ul>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">Communication Systems:</span></p>
+            <ul class="c5 lst-kix_63xfz2yrl61i-0 start">
+               <li class="c2 c7 li-bullet-0"><span class="c0">Set up an effective communication system to alert students, faculty, and staff about evacuation procedures and transportation arrangements. Utilize multiple channels such as text messages, emails, and public announcements to quickly disseminate information.</span></li>
+            </ul>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">Regular Training and Drills:</span></p>
+            <ul class="c5 lst-kix_wvlahgli5voi-0 start">
+               <li class="c2 c7 li-bullet-0"><span class="c0">Conduct regular training sessions and evacuation drills involving transportation services. This ensures that drivers and staff understand their roles and responsibilities during emergencies and can carry out evacuation plans effectively. </span></li>
+            </ul>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">&nbsp;Flexible Routing:</span></p>
+            <ul class="c5 lst-kix_54zumi5bdi3-0 start">
+               <li class="c2 c7 li-bullet-0"><span class="c0">Designate multiple evacuation routes to accommodate various scenarios while avoiding congestion. Determine alternative drop-off points or assembly areas in case the primary evacuation sites are inaccessible.</span></li>
+            </ul>
+            <p class="c2 c3 c15"><span class="c0"></span></p>
+            <p class="c4"><span class="c0">To ensure everyone&#39;s safety during an emergency, buses should be equipped with first aid kits, blankets, water, and food. Additionally, keeping buses in good condition and filled with fuel allows for longer evacuations. To ensure a smooth evacuation, parents and guardians should learn about evacuation plans and transportation options.</span></p>
+            <p class="c4"><span class="c0">San Beda College Alabang may improve its evacuation plans by including transportation options such as school buses. This allows them to use what they already have to keep everyone safe in an emergency.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>        
+        </div>
+
+        <div id="coord" class="tabcontent content">
+            <img src="images/response.jpg" width="50%" style="float:right;margin-left:10px;"/>
+            <p class="c2"><span class="c0">Before going to the specifics of the plan, what is post-disaster recovery and support, and why is it important? Post-disaster recovery and support refers to the techniques and resources used to rebuild, restore, and assist communities, individuals, and infrastructure that have been harmed by a natural or man-made disaster. It involves an extensive plan created to facilitate recovery from a disaster and a return to normal. After a disaster, life preservation, reestablishing livelihoods, and community reconstruction depend heavily on the post-disaster recovery and support plan of the community.</span></p>
+            <p class="c2 c3"><span class="c0"></span></p>
+            <p class="c2"><span class="c0">Let&#39;s begin to talk about the post-disaster recovery and support plan.</span></p>
+            <ul class="c5 lst-kix_8lcb3pqwdwy5-0 start">
+                <li class="c2 c7 li-bullet-0"><span class="c0">Create a team &ndash; Coordination, knowledge, engagement with the community, and future preparation are all improved by having a dedicated team for a post-disaster recovery plan, which ultimately raises the efficacy and sustainability of recovery initiatives.</span></li>
+            </ul>
+            <ul class="c5 lst-kix_8lcb3pqwdwy5-1 start">
+                <li class="c2 c6 li-bullet-0"><span class="c0">Team members are required to have strong interpersonal skills, effective communication, and a willingness to work together to accomplish shared goals which is to help the community recover from the disaster.</span></li>
+                <li class="c2 c6 li-bullet-0"><span class="c0">This includes the collaboration of emergency response teams such as &nbsp;Bureau of Fire Protection (BFP), the Philippine Coast Guard (PCG), and the local government unit (LGU) of Batangas City.</span></li>
+            </ul>
+            <ul class="c5 lst-kix_8lcb3pqwdwy5-0">
+                <li class="c2 c7 li-bullet-0"><span class="c0">Collect-Community based data &ndash; This emphasizes the specific needs, issues and dangers of the affected areas.</span></li>
+            </ul>
+            <ul class="c5 lst-kix_8lcb3pqwdwy5-1 start">
+                <li class="c2 c6 li-bullet-0"><span class="c0">Existing plans and strategies &ndash; The team should make a list of all the planning documents, recommendations, and strategies that are currently in place and relevant to the recovery efforts following a disaster. Companies, citizens, and government representatives already support formal planning papers and active programs, so knowing what is already in place is essential. They might also already have frameworks in place for putting the strategies the team discussed into practice. Incorporating community agencies as prospective partners during the rehabilitation process is a beneficial enhancement to pre-existing plans, strategies, and activities.</span></li>
+                <li class="c2 c6 li-bullet-0"><span class="c0">Hazard history &ndash; This is essential for making informed decisions, reducing risks, developing adaptability, and including the community in post-disaster recovery efforts. Communities can strengthen their ability to withstand risks in the future and thrive in the face of adversity by thinking back on past events and using the lessons learned to formulate and carry out recovery plans.</span></li>
+            </ul>
+            <ul class="c5 lst-kix_8lcb3pqwdwy5-0">
+                <li class="c2 c7 li-bullet-0"><span class="c0">Recovery Planning &ndash; Planning for post-disaster recovery gives a community a long-term vision for reconstruction rather than focusing on short-term life safety concerns.</span></li>
+            </ul>
+            <ul class="c5 lst-kix_8lcb3pqwdwy5-1 start">
+                <li class="c2 c6 li-bullet-0"><span class="c0">Stress the significance of correcting mindsets centered on &quot;returning to normal&quot; as well. After devastating events, communities may find it impossible to get back to normal.</span></li>
+                <li class="c2 c6 li-bullet-0"><span class="c0">Population &ndash; Identify who in the population is most at risk.</span></li>
+                <li class="c2 c6 li-bullet-0"><span class="c0">Economy &ndash; Identify specific businesses that will be affected.</span></li>
+            </ul>
+            <ul class="c5 lst-kix_8lcb3pqwdwy5-0">
+                <li class="c2 c7 li-bullet-0"><span class="c0">Strategies &ndash; The strategies include comprehensive recommendations for items that local The creation of long-term rehabilitation strategies could involve departments, individuals, and other stakeholders.</span></li>
+            </ul>
+            <ul class="c5 lst-kix_8lcb3pqwdwy5-1 start">
+                <li class="c2 c6 li-bullet-0"><span class="c0">Recovery Strategy &ndash; Use an adaptive management approach that enables flexibility, learning, and modifying in response to changing circumstances, stakeholder input, and evolving expectations. Boost local capacity in areas such as disaster risk reduction, sustainable development, diversification of livelihoods, and emergency response. Determine the needs, priorities, and vulnerabilities of affected populations in detail, accounting for factors such as displaced housing, damaged infrastructure, medical needs, economic repercussions, and social and psychological well-being.</span></li>
+                <li class="c2 c6 li-bullet-0"><span class="c0">Addressed to &ndash; population/community, economy, land and development.</span></li>
+                <li class="c2 c6 li-bullet-0"><span class="c0">Implementation &ndash; By putting these suggestions into fact, the people located in Batangas near the Taal volcano can reconstruct their lives, strengthen their resilience, and create a more sustainable and prosperous future following a volcanic explosion.</span></li>
+            </ul>
+            <ul class="c5 lst-kix_8lcb3pqwdwy5-0">
+                <li class="c2 c7 li-bullet-0"><span class="c0">Announcement &ndash; The post-disaster plan is shared with the community, giving them the power to determine what&#39;s best for their own safety and well-being.</span></li>
+            </ul>
+        </div>
+
+        <div id="psych" class="tabcontent content">
+            <img src="images/trauma.jpg" width="50%" style="float:left;margin-right:10px;"/>
+            <p class="c0">The proposal advocates for the widespread adoption of trauma-informed treatment approaches that fundamentally acknowledge and address the profound, lasting effects that traumatic experiences can have on individuals and entire communities. For patients suffering from severe psychological distress, it is imperative that counseling and treatment prioritize exploring and processing any underlying trauma they may have endured. Counselors and therapists should be well-versed in trauma-responsive care that creates a safe, supportive environment for patients to confront and heal from their traumatic histories.</p>
+            <p>&nbsp;</p>
+            <p class="c0">Furthermore, the proposal calls for actively promoting and facilitating the creation of community-based support groups. These groups would serve as essential platforms for those who have experienced trauma to openly share their emotions, recount their past traumatic experiences if they choose, and exchange coping strategies with others on a similar journey. The power of these support groups lies in fostering a profound sense of community, understanding, and fellowship among members - helping to minimize the alienation, disconnection and loneliness that trauma can often engender.</p>  
+            <p>&nbsp;</p>
+            <p class="c0">By integrating trauma-informed care at the clinical level alongside community-based support systems, this multi-pronged approach aims to holistically validate, understand and aid in resolving trauma's insidious psychological impacts. Collectively acknowledging trauma's influence, both for individuals and communities, is a crucial first step in enabling recovery, resilience and healing.</p>
+        </div>
+
+        <div id="conc" class="tabcontent content">
+            <img src="images/conc1.jpg" width="50%" style="float:right;margin-left:10px;"/>
+            <p class="c4"><span class="c0">Preparedness and technology play important roles in mitigating earthquakes and volcanic eruptions. Given the proximity of San Beda College Alabang to the West Valley Fault and potential activity from Tall Volcano, the school must prioritize these precaution measures;</span></p>
+            <ul class="c5 lst-kix_sxwp0ho8tp22-0 start">
+               <li class="c11 c7 li-bullet-0"><span class="c0">Early Warning Systems: Modern technology allows for development of early warning systems that can detect seismic activity or volcanic unrest, allowing faculty to release advanced notices. Early warnings can save lives by giving students and staff time to evacuate to safer areas</span></li>
+            </ul>
+            <ul class="c5 lst-kix_9v1sco38ps2n-0 start">
+               <li class="c11 c7 li-bullet-0"><span class="c0">Monitoring and Prediction: Seismometers and GPS sensors are advanced monitoring technologies used to help scientists track volcanic and seismic activity, allowing them to anticipate future eruptions or earthquakes. This information is crucial for building code and structure resilience </span></li>
+            </ul>
+            <ul class="c5 lst-kix_z3umo3ctnd8p-0 start">
+               <li class="c11 c7 li-bullet-0"><span class="c0">Building Resilience: Ensuring that buildings comply to building codes and are designed to withstand ground shaking, in order to reduce the possibility of infrastructures collapsing. Technology can be used to design and construct buildings that are more resistant to seismic activity and volcanic ashfall</span></li>
+               <li class="c11 c7 l"><span class="c0">Communication and Coordination: Technology handles communication and uniformity with local government, emergency responders, and the school community during a crisis. This ensures effective response in the event of a disaster.</span></li>
+            </ul>
+            <ul class="c5 lst-kix_sfai44jaaztf-0 start">
+               <li class="c7 c11 li-bullet-0"><span class="c0">Education and Awareness: Educating students, faculty, and staff about risks associated with earthquakes and volcanic eruptions and how to prepare for them, can minimize panic and confusion incase of an emergency</span></li>
+            </ul>
+            <p class="c11"><span class="c0">In conclusion, by prioritizing these preparedness measures and elevating technology, San Beda College Alabang can reduce the risks brought by earthquakes and volcanic eruptions, ensuring the safe of its community</span></p>
+        </div>
+
+        <script>
+            window.onload = () => { document.getElementById('defaultOpen').click(); };
+
+            function openSubtab(subtab, evt) {
+                if (subtab == 1) {
+                    tab = document.getElementById('subtablinks1');
+
+                    if (tab.classList.contains('subactive')) {
+                        tab.classList.remove('subactive');
+                        evt.currentTarget.className = "tablinks";
+                    } else {
+                        tab.classList.add('subactive');
+                        evt.currentTarget.className += ' aactive';
+                    }
+
+                } else if (subtab == 2) {
+                    tab = document.getElementById('subtablinks2');
+
+                    if (tab.classList.contains('subactive')) {
+                        tab.classList.remove('subactive');
+                        evt.currentTarget.className = "tablinks";
+                    } else {
+                        tab.classList.add('subactive');
+                        evt.currentTarget.className += ' aactive';
+                    }
+                } else {
+                    tab = document.getElementById('subtablinks3');
+
+                    if (tab.classList.contains('subactive')) {
+                        tab.classList.remove('subactive');
+                        evt.currentTarget.className = "tablinks";
+                    } else {
+                        tab.classList.add('subactive');
+                        evt.currentTarget.className += ' aactive';
+                    }
+                }
+            }
+
+            function openCity(evt, cityName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+    </body>
+</html>
